@@ -8,6 +8,7 @@
 @layer base {
     body {
       font-family: "Schibsted Grotesk", sans-serif;
+      background-color: #fcfcfc;
     }
     h1,
     h2,
@@ -23,4 +24,5 @@
         "Liberation Mono", "Courier New", monospace;
     }
 }
-  
+
+
