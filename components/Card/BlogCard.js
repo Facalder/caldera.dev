@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const BlogCard = () => {
   return (
-    <Link href="/blog" className="transition-all hover:scale-105">
+    <Link href="/example" className="transition-all hover:scale-105">
       <div className="w-full">
         <Image
           src="/../public/img/thumbnail.jpg"

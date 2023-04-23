@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <BlogList title="Latest Post" allPost="block" column={2} />
+      <BlogList title="Latest Post" allPost="block" column="2" />
     </>
   );
 };

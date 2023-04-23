@@ -3,16 +3,8 @@ import Image from 'next/image';
 const About = () => {
   return (
     <section className="space-y-12">
-      <Image
-        src="/../public/img/thumbnail.jpg"
-        width={200}
-        height={200}
-        alt="Profile Photo"
-        className="w-full rounded-lg"
-      />
-
       <div className="space-y-6">
-        <h1 className="text-base font-medium">About Me</h1>
+        <h1 className="text-xl font-medium">About Me</h1>
         <p className="text-base text-gray-600">
           Hey, I’m Fa Ainama (Caldera), a self-taught developer, writer and an open source
           enthusiast exploring what’s possible on the web and with software. I like to
@@ -21,6 +13,13 @@ const About = () => {
           developers.
         </p>
       </div>
+      <Image
+        src="/../public/img/thumbnail.jpg"
+        width={200}
+        height={200}
+        alt="Profile Photo"
+        className="w-full rounded-lg"
+      />
 
       <div className="space-y-6">
         <h1 className="text-base font-medium">About Site</h1>

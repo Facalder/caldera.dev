@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const BlogLayout = () => {
   return (
-    <article className="space-y-10">
+    <article className="space-y-8">
       <header className="mb-4 space-y-10 lg:mb-6">
         <address className="flex items-center not-italic">
           <div className="mr-3 inline-flex items-center text-xs">
@@ -17,14 +17,14 @@ const BlogLayout = () => {
               <h4 className="text-base font-medium">Jese Leos</h4>
               <p className="text-gray-600">Graphic Designer, educator & CEO Flowbite</p>
               <p className="text-gray-600">
-                <time pubdate datetime="2022-02-08" title="February 8th, 2022">
+                <time dateTime="2022-02-08" title="February 8th, 2022">
                   Feb. 8, 2022
                 </time>
               </p>
             </div>
           </div>
         </address>
-        <h1 className="text-xl font-medium">
+        <h1 className="text-2xl font-medium text-gray-800">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius nihil
           debitis, esse tenetur, doloremque, optio aspernatur quae odit ab
         </h1>
@@ -52,6 +52,9 @@ const BlogLayout = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum.{' '}
         </p>
       </div>
+      <pre className="my-6 rounded-lg bg-yellow-50 p-4">
+        <code className="text-sm text-gray-600 ">const hello = "Omagaa"</code>{' '}
+      </pre>
 
       <p className="text-base text-gray-600">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cum qui iusto
