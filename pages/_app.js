@@ -1,8 +1,8 @@
-import '@/styles/globals.css';
+import '@/public/css/globals.css';
 
 import { useEffect } from 'react';
 
-import Layout from '@/components/layouts/Index';
+import Layout from '@/pages/layout';
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
