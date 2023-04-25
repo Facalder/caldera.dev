@@ -5,7 +5,7 @@ const ProjectCard = () => {
   return (
     <Link
       href='/projectLayout'
-      className='rounded-lg border border-gray-200 p-4 transition-all hover:border-2 hover:bg-gray-50'
+      className='rounded-lg bg-gray-50 p-4 transition-all hover:bg-gray-100'
     >
       <div className='w-full'>
         <Image

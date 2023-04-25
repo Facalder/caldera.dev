@@ -9,7 +9,7 @@ import Grid from './container/Grid'
 const Posts = ({ title, showLink }) => {
   return (
     <Box space='8'>
-      <h1 className='text-base font-medium text-gray-900'>{title}</h1>
+      <h2>{title}</h2>
 
       <Grid>
         <PostCard />

@@ -3,7 +3,10 @@ import Link from 'next/link'
 
 const PostCard = () => {
   return (
-    <Link href='/example' className='transition-all hover:scale-105'>
+    <Link
+      href='/example'
+      className='space-y-4 rounded-lg bg-gray-50 p-4 transition-all hover:bg-gray-100'
+    >
       <div className='w-full'>
         <Image
           src='/../public/img/thumbnail.jpg'
@@ -13,13 +16,14 @@ const PostCard = () => {
         />
       </div>
 
-      <div className='mt-4 space-y-2'>
-        <h2 className=' text-base font-medium text-gray-800'>
+      <div className='space-y-3'>
+        <h2 className='text-lg font-medium text-gray-800'>
           Unity’s inside sales team drives 80% of its revenue with Preline.
         </h2>
         <p className='text-base text-gray-600'>
           The best way to connect a wallet.
         </p>
+        <p className='text-yellow-600'>12 January 2023</p>
       </div>
     </Link>
   )

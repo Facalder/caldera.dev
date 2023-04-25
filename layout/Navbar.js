@@ -11,7 +11,7 @@ const Navbar = () => {
       >
         <div className='flex items-center justify-between'>
           <Link
-            className='text-lg font-medium text-yellow-600'
+            className='text-lg font-bold text-yellow-600'
             href='/'
             aria-label='Brand'
           >
@@ -25,8 +25,14 @@ const Navbar = () => {
               aria-controls='navbar-collapse-with-animation'
               aria-label='Toggle navigation'
             >
-              <BiMenuAltRight size={24} className=' hs-collapse-open:hidden' />
-              <BiX size={24} className='hidden  hs-collapse-open:block' />
+              <BiMenuAltRight
+                size={24}
+                className='text-yellow-600 hs-collapse-open:hidden'
+              />
+              <BiX
+                size={24}
+                className='hidden  text-yellow-600  hs-collapse-open:block'
+              />
             </button>
           </div>
         </div>
@@ -46,7 +52,7 @@ const Navbar = () => {
             <li>
               <Link
                 className='text-sm font-normal text-gray-500 hover:text-yellow-600 hover:underline hover:underline-offset-4'
-                href='/'
+                href='/category'
               >
                 Category
               </Link>
@@ -62,7 +68,7 @@ const Navbar = () => {
             <li>
               <Link
                 className='text-sm font-normal text-gray-500 hover:text-yellow-600 hover:underline hover:underline-offset-4'
-                href='/'
+                href='/uses'
               >
                 Uses
               </Link>

@@ -29,7 +29,7 @@ const BlogLayout = () => {
             </div>
           </div>
         </address>
-        <h1 className='font-medium text-gray-800'>
+        <h1 className='font-serif font-medium text-gray-800'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius
           nihil debitis, esse tenetur, doloremque, optio aspernatur quae odit ab
         </h1>
