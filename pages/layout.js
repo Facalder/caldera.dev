@@ -1,15 +1,15 @@
-import SectionContainer from '../components/layout/container/Container';
-import Footer from '../components/layout/footer/Footer';
-import Navbar from '../components/layout/header/Navbar';
+import Container from '../layout/container/Container'
+import Footer from '../layout/Footer'
+import Navbar from '../layout/Navbar'
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <SectionContainer>{children}</SectionContainer>
+      <Container>{children}</Container>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

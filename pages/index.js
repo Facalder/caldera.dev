@@ -1,13 +1,19 @@
-import Hero from '@/components/home/hero/Hero';
-import BlogList from '@/components/layout/BlogList/BlogList';
+import Hero from '@/components/partials/Hero'
+import Posts from '@/layout/Posts'
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <BlogList title="Latest Post" allPost="block" column="2" />
+      <Hero
+        title='Fa Ainama Caldera Sudibyo'
+        description=' Brain dumps, explorations, and how-to guides. I write about different
+      topics, such as frontend, accessibility, start ups and user/dev
+      experience.'
+        image={false}
+      />
+      <Posts title='Latest Post' showLink={true} />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
