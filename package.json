@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint && npm run lint:fix && npm run lint:format",
-    "lint:fix": "eslint ./**/* --ext .jsx,.js, --quiet --fix -f mo --ignore-path ./.gitignore",
+    "lint:fix": "eslint --ext .jsx,.js, --quiet --fix -f mo --ignore-path ./.gitignore",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\"",
     "prepare": "husky install",
     "commit": "commit"
@@ -49,7 +49,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
-      "pnpm run lint"
+      "npm run lint"
     ]
   }
 }
