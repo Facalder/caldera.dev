@@ -5,21 +5,20 @@ export const media = {
   fields: [
     {
       name: 'image',
-      label: 'image',
+      label: 'Image',
       type: 'image',
     },
     {
       name: 'caption',
-      label: 'caption',
+      label: 'Caption',
       type: 'string',
-      required: true,
       ui: {
         component: 'text',
       },
     },
     {
       name: 'alt',
-      label: 'alt',
+      label: 'ALT',
       type: 'string',
       ui: {
         component: 'text',

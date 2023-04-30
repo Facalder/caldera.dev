@@ -22,11 +22,11 @@ export const authors = {
       },
     },
     {
-      name: 'bio',
-      label: 'Bio',
+      name: 'summary',
+      label: 'Summary',
       type: 'string',
       ui: {
-        component: true,
+        component: 'text',
       },
     },
     media,
