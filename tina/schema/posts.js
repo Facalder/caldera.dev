@@ -1,8 +1,9 @@
-import { seo } from './seo'
+import { media } from './object/media'
+import { seo } from './object/seo'
 
-export const post = {
+export const posts = {
   name: 'post',
-  label: 'Blog Post',
+  label: 'Post',
   path: 'content/posts',
   format: 'mdx',
   fields: [
@@ -10,13 +11,13 @@ export const post = {
       name: 'draft',
       label: 'Draft',
       type: 'boolean',
-      required: true,
     },
     {
       name: 'title',
       label: 'Title',
       type: 'string',
-      description: 'Enter the title of the post here',
+      isTitle: true,
+      required: true,
       ui: {
         component: 'text',
       },
@@ -25,10 +26,33 @@ export const post = {
       name: 'description',
       label: 'Description',
       type: 'string',
-      description: 'Enter the description of the post here',
       ui: {
         component: 'textarea',
       },
+    },
+    media,
+    {
+      name: 'post',
+      label: 'Content Post',
+      type: 'rich-text',
+      isBody: true,
+    },
+    {
+      name: 'category',
+      label: 'Category',
+      type: 'reference',
+      collections: ['category'],
+    },
+    {
+      name: 'author',
+      label: 'Author',
+      type: 'reference',
+      collections: ['author'],
+    },
+    {
+      name: 'publishedAt',
+      label: 'Published At',
+      type: 'datetime',
     },
     seo,
   ],

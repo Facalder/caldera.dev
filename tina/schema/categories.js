@@ -1,15 +1,20 @@
-export const category = {
+export const categories = {
   name: 'category',
   label: 'Category',
-  path: 'content/category',
+  path: 'content/categories',
   format: 'mdx',
   fields: [
     {
+      name: 'draft',
+      label: 'Draft',
+      type: 'boolean',
+    },
+    {
       name: 'name',
       label: 'Category',
-      required: true,
       type: 'string',
-      description: 'Enter the name of the category here',
+      required: true,
+      isTitle: true,
       ui: {
         component: 'text',
       },
@@ -18,21 +23,14 @@ export const category = {
       name: 'description',
       label: 'Description',
       type: 'string',
-      description: 'Enter the description of the category here',
       ui: {
         component: 'textarea',
       },
     },
     {
-      component: 'text',
       name: 'icon',
       label: 'Icon',
       type: 'string',
-      description:
-        'Enter the remix icon class of the category here (fill with -)',
-      ui: {
-        component: 'text',
-      },
     },
   ],
 }
