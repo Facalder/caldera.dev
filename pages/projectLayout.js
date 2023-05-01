@@ -1,61 +1,47 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
-import Hero from '@/components/partials/Hero'
-import Box from '@/layout/container/Box'
-
-const ShowcaseProject = () => {
+const ProjectLayout = ({ children }) => {
   return (
-    <>
-      <Hero
-        title='Project 1 huhu hehe'
-        description='Cuma desc jelek'
-        image={true}
-        src='/../public/img/thumbnail.jpg'
-        alt='Profile Photo'
-      />
-      <Box>
-        <div className='prose max-w-none pb-10'>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-            repellat ab sint. Tenetur eligendi perspiciatis repudiandae quia
-            numquam facilis, vel, necessitatibus eos nam ipsum non excepturi
-            libero ad ratione et!
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-            repellat ab sint. Tenetur eligendi perspiciatis repudiandae quia
-            numquam facilis, vel, necessitatibus eos nam ipsum non excepturi
-            libero ad ratione et!
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-            repellat ab sint. Tenetur eligendi perspiciatis repudiandae quia
-            numquam facilis, vel, necessitatibus eos nam ipsum non excepturi
-            libero ad ratione et!
-          </p>
+    <article className='space-y-10'>
+      <section className='space-y-6'>
+        <div className='space-y-3 md:space-y-6'>
+          <Link
+            href='/blog'
+            className='heading-4 text-yellow-600 hover:underline'
+          >
+            Back
+          </Link>
+          <div className='space-y-3'>
+            <h1 className='heading-1'>
+              Unity’s inside sales team drives 80% of its revenue with Preline.
+            </h1>
+            <p className='paragraph flex justify-between'>
+              <Link href='/about'>Github</Link>
+              <time className='font-bold text-yellow-600'>ket waktu</time>
+            </p>
+          </div>
         </div>
-      </Box>
-      <Box>
-        <div className='flex gap-x-4'>
-          <Link href='/'>
-            <span className='inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 text-xs font-medium text-yellow-100'>
-              Badge
-            </span>
-          </Link>
-          <Link href='/'>
-            <span className='inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 text-xs font-medium text-yellow-100'>
-              Badge
-            </span>
-          </Link>
-          <Link href='/'>
-            <span className='inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 text-xs font-medium text-yellow-100'>
-              Badge
-            </span>
-          </Link>
-        </div>
-      </Box>
-    </>
+        <Image
+          src='/../public/img/thumbnail.jpg'
+          width={400}
+          height={200}
+          alt='Card Thumbnail'
+        />
+      </section>
+      <section className='prose prose-gray max-w-none prose-headings:font-BeVietnamPro'>
+        {children}
+      </section>
+
+      <section className='flex gap-4'>
+        <Link href='/category'>
+          <span className='footnote inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 font-medium text-yellow-100 hover:bg-yellow-700'>
+            Category
+          </span>
+        </Link>
+      </section>
+    </article>
   )
 }
 
-export default ShowcaseProject
+export default ProjectLayout

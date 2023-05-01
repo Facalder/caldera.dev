@@ -1,107 +1,47 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Box from '@/layout/container/Box'
-
-const BlogLayout = () => {
+const Example = ({ children }) => {
   return (
-    <article className='space-y-8'>
-      <Box space='8'>
-        <address className='flex items-center justify-between not-italic'>
-          <div className='mr-3 inline-flex items-center text-xs'>
-            <Image
-              className='mr-4 h-12 w-12 rounded-full bg-center object-cover'
-              src='/../public/img/thumbnail.jpg'
-              alt='Jese Leos'
-              width={100}
-              height={100}
-            />
-            <div>
-              <h4 className='text-base font-medium'>Fa Ainama Caldera</h4>
-              <p className='text-sm text-gray-600 md:text-base'>
-                Frontend Developer & SMK IDN Boarding School Graduated
-              </p>
-              <p className='text-sm text-gray-600 md:text-base'>
-                <time dateTime='2022-02-08' title='February 8th, 2022'>
-                  Feb. 8, 2022
-                </time>
-              </p>
-            </div>
+    <article className='space-y-10'>
+      <section className='space-y-6'>
+        <div className='space-y-3 md:space-y-6'>
+          <Link
+            href='/blog'
+            className='heading-4 text-yellow-600 hover:underline'
+          >
+            Back
+          </Link>
+          <div className='space-y-3'>
+            <h1 className='heading-1'>
+              Unity’s inside sales team drives 80% of its revenue with Preline.
+            </h1>
+            <p className='paragraph flex justify-between'>
+              <Link href='/about'>Fa Ainama Caldera Sudibyo</Link>
+              <time className='font-bold text-yellow-600'>12 January 2023</time>
+            </p>
           </div>
-        </address>
-        <h1 className='font-serif font-medium text-gray-800'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius
-          nihil debitis, esse tenetur, doloremque, optio aspernatur quae odit ab
-        </h1>
-      </Box>
-
-      <Box>
-        <div className='prose max-w-none pb-10'>
-          <figure>
-            <Image
-              src='/../public/img/thumbnail.jpg'
-              alt='Jese Leos'
-              width={100}
-              height={100}
-            />
-            <figcaption>this alt of image</figcaption>
-          </figure>
-
-          <h2>This h2</h2>
-          <h3>This h3</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-            repellat ab sint. Tenetur eligendi perspiciatis repudiandae quia
-            numquam facilis, vel, necessitatibus eos nam ipsum non excepturi
-            libero ad ratione et!
-          </p>
-
-          <ul>
-            <li>this is list 1</li>
-            <li>this is list 2</li>
-            <li>this is list 3</li>
-          </ul>
-
-          <blockquote>this is blockquote</blockquote>
-          <pre>this is pre</pre>
-
-          <Link href='/'>Hello </Link>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-            repellat ab sint. Tenetur eligendi perspiciatis repudiandae quia
-            numquam facilis, vel, necessitatibus eos nam ipsum non excepturi
-            libero ad ratione et!
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-            repellat ab sint. Tenetur eligendi perspiciatis repudiandae quia
-            numquam facilis, vel, necessitatibus eos nam ipsum non excepturi
-            libero ad ratione et!
-          </p>
         </div>
-      </Box>
+        <Image
+          src='/../public/img/thumbnail.jpg'
+          width={400}
+          height={200}
+          alt='Card Thumbnail'
+        />
+      </section>
+      <section className='prose prose-gray max-w-none prose-headings:font-BeVietnamPro'>
+        {children}
+      </section>
 
-      <Box>
-        <div className='flex gap-x-4'>
-          <Link href='/'>
-            <span className='inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 text-xs font-medium text-yellow-100'>
-              Badge
-            </span>
-          </Link>
-          <Link href='/'>
-            <span className='inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 text-xs font-medium text-yellow-100'>
-              Badge
-            </span>
-          </Link>
-          <Link href='/'>
-            <span className='inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 text-xs font-medium text-yellow-100'>
-              Badge
-            </span>
-          </Link>
-        </div>
-      </Box>
+      <section className='flex gap-4'>
+        <Link href='/category'>
+          <span className='footnote inline-flex items-center gap-1.5 rounded-md bg-yellow-600 px-3 py-1.5 font-medium text-yellow-100 hover:bg-yellow-700'>
+            Category
+          </span>
+        </Link>
+      </section>
     </article>
   )
 }
 
-export default BlogLayout
+export default Example

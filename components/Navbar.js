@@ -4,14 +4,14 @@ import { BiMenuAltRight, BiX } from 'react-icons/bi'
 
 const Navbar = () => {
   return (
-    <header className='sticky top-0 z-50 flex w-full flex-wrap bg-[#fefefefe]/90 p-6 backdrop-blur-sm sm:flex-nowrap sm:justify-start sm:px-6 lg:px-0'>
+    <header className='sticky top-0 z-50 flex w-full flex-wrap bg-[#fefefefe]/90 p-4 backdrop-blur-sm sm:flex-nowrap sm:justify-start sm:px-6 md:p-6 lg:px-0'>
       <div
-        className='relative mx-auto w-full max-w-2xl sm:flex sm:items-center sm:justify-between'
+        className='relative mx-auto w-full max-w-3xl sm:flex sm:items-center sm:justify-between'
         aria-label='Global'
       >
         <div className='flex items-center justify-between'>
           <Link
-            className='text-lg font-bold text-yellow-600'
+            className='heading-4 text-yellow-600'
             href='/'
             aria-label='Brand'
           >
@@ -43,7 +43,7 @@ const Navbar = () => {
           <ul className='mt-5 flex flex-col gap-x-0 gap-y-6 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:gap-x-10 sm:gap-y-0 sm:pl-7'>
             <li>
               <Link
-                className='text-sm font-normal text-gray-500 hover:text-yellow-600 hover:underline hover:underline-offset-4'
+                className='text-sm font-medium text-gray-600 hover:text-yellow-600 hover:underline hover:underline-offset-4'
                 href='/blog'
               >
                 Blog
@@ -51,7 +51,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className='text-sm font-normal text-gray-500 hover:text-yellow-600 hover:underline hover:underline-offset-4'
+                className='text-sm font-normal text-gray-600 hover:text-yellow-600 hover:underline hover:underline-offset-4'
                 href='/category'
               >
                 Category
@@ -59,7 +59,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className=' text-sm font-normal text-gray-500 hover:text-yellow-600 hover:underline hover:underline-offset-4'
+                className=' text-sm font-normal text-gray-600 hover:text-yellow-600 hover:underline hover:underline-offset-4'
                 href='/about'
               >
                 About
@@ -67,7 +67,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className='text-sm font-normal text-gray-500 hover:text-yellow-600 hover:underline hover:underline-offset-4'
+                className='text-sm font-normal text-gray-600 hover:text-yellow-600 hover:underline hover:underline-offset-4'
                 href='/uses'
               >
                 Uses
@@ -75,7 +75,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className='text-sm font-normal text-gray-500 hover:text-yellow-600 hover:underline hover:underline-offset-4'
+                className='text-sm font-normal text-gray-600 hover:text-yellow-600 hover:underline hover:underline-offset-4'
                 href='/project'
               >
                 Project

@@ -1,25 +1,24 @@
-import Hero from '@/components/partials/Hero'
-import Box from '@/layout/container/Box'
+import Image from 'next/image'
 
 const About = ({ children }) => {
   return (
-    <>
-      <Hero
-        title='About Me'
-        description=' Hey, I’m Fa Ainama (Caldera), a self-taught developer, writer and an open source
-          enthusiast exploring what’s possible on the web and with software. I like to
-          spend my time building projects that interest me, as well as pushing myself to
-          learn more through open source projects and share my knowledge with other
-          developers.'
-        image={true}
-        src='/../public/img/thumbnail.jpg'
-        alt='Profile Photo'
-      />
-
-      <Box>
-        <div className='prose max-w-none'>{children}</div>
-      </Box>
-    </>
+    <article className='space-y-10'>
+      <section className='space-y-6'>
+        <div className='space-y-3'>
+          <h1 className='heading-1'>About Me</h1>
+          <p className='paragraph'>Hi There I am Bla Bla</p>
+        </div>
+        <Image
+          src='/../public/img/thumbnail.jpg'
+          width={400}
+          height={200}
+          alt='Card Thumbnail'
+        />
+      </section>
+      <section className='prose prose-gray max-w-none prose-headings:font-BeVietnamPro'>
+        {children}
+      </section>
+    </article>
   )
 }
 
