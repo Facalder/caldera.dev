@@ -1,57 +1,27 @@
 import Image from 'next/image'
 
-import Hero from '@/components/partials/Hero'
-import Box from '@/layout/container/Box'
-
 const Uses = () => {
   return (
     <>
-      <Hero
-        title='Omagaa'
-        description='muhehehehe'
-        src='/../public/img/thumbnail.jpg'
-        image={true}
-      />
-      <Box space='8'>
-        <h2>Hello World</h2>
+      <section className='space-y-6'>
+        <div className='space-y-3'>
+          <h1 className='heading-1'>Uses</h1>
+          <p className='paragraph'>
+            This is the equipment I currently use for gaming, programming,
+            making videos, and every day.
+          </p>
+        </div>
+        <Image
+          src='/../public/img/thumbnail.jpg'
+          width={400}
+          height={200}
+          alt='Card Thumbnail'
+        />
+      </section>
+      <section className='space-y-4'>
+        <h2 className='heading-2'>Hardware</h2>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
-          <div className='rounded-lg bg-gray-50 p-4 transition-all hover:bg-gray-100'>
-            <Image
-              src='/../public/img/thumbnail.jpg'
-              width={400}
-              height={200}
-              alt='Card Thumbnail'
-            />
-
-            <div className='mt-4 space-y-2'>
-              <h2 className='text-base font-medium text-gray-800'>
-                Unity’s inside sales team drives 80% of its revenue with
-                Preline.
-              </h2>
-              <p className='text-base text-gray-600'>
-                The best way to connect a wallet.
-              </p>
-            </div>
-          </div>
-          <div className='rounded-lg bg-gray-50 p-4 transition-all hover:bg-gray-100'>
-            <Image
-              src='/../public/img/thumbnail.jpg'
-              width={400}
-              height={200}
-              alt='Card Thumbnail'
-            />
-
-            <div className='mt-4 space-y-2'>
-              <h2 className='text-base font-medium text-gray-800'>
-                Unity’s inside sales team drives 80% of its revenue with
-                Preline.
-              </h2>
-              <p className='text-base text-gray-600'>
-                The best way to connect a wallet.
-              </p>
-            </div>
-          </div>
-          <div className='rounded-lg bg-gray-50 p-4 transition-all hover:bg-gray-100'>
+          <div className='border p-3 transition-all hover:bg-gray-50'>
             <Image
               src='/../public/img/thumbnail.jpg'
               width={400}
@@ -60,17 +30,12 @@ const Uses = () => {
             />
 
             <div className='mt-4 space-y-2'>
-              <h2 className='text-base font-medium text-gray-800'>
-                Unity’s inside sales team drives 80% of its revenue with
-                Preline.
-              </h2>
-              <p className='text-base text-gray-600'>
-                The best way to connect a wallet.
-              </p>
+              <h2 className='heading-5'>Macbook Pro 2020</h2>
+              <p className='footnote'>Space Gray</p>
             </div>
           </div>
         </div>
-      </Box>
+      </section>
     </>
   )
 }

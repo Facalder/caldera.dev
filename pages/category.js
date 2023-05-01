@@ -1,32 +1,44 @@
 import Link from 'next/link'
 import { BiCodeAlt } from 'react-icons/bi'
 
-import Hero from '@/components/partials/Hero'
-import Grid from '@/layout/container/Grid'
-
 const Category = () => {
   return (
     <>
-      <Hero title='Tags' />
-      <Grid>
-        <Link
-          href='/'
-          className='group flex flex-col rounded-lg bg-gray-50  transition-all hover:bg-gray-100'
-        >
+      <section className='space-y-3'>
+        <h1 className='heading-1'>Design and Code</h1>
+        <p className='paragraph'>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora,
+          impedit fugit dolorem perspiciatis laborum exercitationem quibusdam.
+          Inventore repudiandae animi omnis, quos minima corporis veritatis,
+          fugit eligendi recusandae distinctio, hic quae.
+        </p>
+      </section>
+      <section className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+        <Link href='/' className='flex flex-col  border hover:bg-gray-50'>
           <div className='p-4 md:p-5'>
             <div className='flex items-center gap-x-5'>
-              <BiCodeAlt size={24} />
+              <BiCodeAlt size={24} className='text-gray-600' />
 
               <div className='grow space-y-1'>
-                <h2 className='text-lg font-medium text-gray-800'>Category</h2>
-                <p className='text-sm text-gray-600'>
-                  Get Help from 40k bla bla bla
-                </p>
+                <h2 className='heading-4'>Category</h2>
+                <p className='paragraph'>Get Help from 40k bla bla bla</p>
               </div>
             </div>
           </div>
         </Link>
-      </Grid>
+        <Link href='/' className='flex flex-col  border hover:bg-gray-50'>
+          <div className='p-4 md:p-5'>
+            <div className='flex items-center gap-x-5'>
+              <BiCodeAlt size={24} className='text-gray-600' />
+
+              <div className='grow space-y-1'>
+                <h2 className='heading-4'>Category</h2>
+                <p className='paragraph'>Get Help from 40k bla bla bla</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </section>
     </>
   )
 }
